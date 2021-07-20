@@ -65,7 +65,7 @@ Tested in Debian and Rhel
 
 Github repository
 
-   git clone https://github.com/nodanero/nodanero-fusioninventory fusioninventory
+   git clone https://github.com/BooneHub/fusioninventory fusioninventory
 
 Building module
 

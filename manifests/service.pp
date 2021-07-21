@@ -1,13 +1,15 @@
-
-#include fusion inventory
-
+# @summary
+#   This class handles the fusioninventory service.
+#
+# @api private
+#
 class fusioninventory::service inherits fusioninventory::params {
   file { '/etc/fusioninventory/agent.cfg':
     ensure  => 'present',
     owner   => 'root',
     group   => 'root',
-    mode    => '0755',
-    content => template('fusioninventory/agent.cfg.erb'),
+    mode    => '0644',
+    content => epp('fusioninventory/agent.cfg.epp'),
   }
 
   service { $fusioninventory::params::pkgfusion :

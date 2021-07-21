@@ -1,0 +1,21 @@
+# agent.cfg: Managed by puppet.
+#
+
+<% if $fusioninventory::server_url { -%>
+# send tasks results to a FusionInventory for GLPI server
+server = <%= $fusioninventory::server_url %>
+<% } -%>
+
+#
+# Target scheduling options
+#
+# maximum delay before first target, in seconds
+delaytime = <%= $fusioninventory::delaytime %>
+
+#
+# Network options
+#
+
+<% if $fusioninventory::no_proxy == false { -%>
+proxy = http://proxy_url:port
+<% } -%>

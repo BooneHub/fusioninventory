@@ -1,9 +1,9 @@
 #!/bin/bash
 #
-# File managed by puppet
+# fusioninventory: Managed by puppet.
 #
-# Do not edit
-<% if @no_proxy %>
+
+<% if $fusioninventory::no_proxy { -%>
 #
 # Remove proxy settings for this script
 #
@@ -11,9 +11,9 @@ http_proxy=''
 https_proxy=''
 HTTP_PROXY=''
 HTTPS_PROXY=''
-<% end %>
+<%  } - %>
 
 # To test this script, use --debug
 
 FUSION=$(whereis fusioninventory-agent | cut -d ' ' -f 2)
-$FUSION --server "<%= @server_url %>"
+$FUSION --server "<%= $fusioninventory::server_url %>"

@@ -15,7 +15,7 @@
 
 ## Overview
 
-This puppet module installs and configures fusion inventory agent in RHEL and Debian
+This puppet module installs and configures fusion inventory agent in Debian and Windows
 
 ## Module Description
 
@@ -25,7 +25,7 @@ Installs fusion inventory agents and configures the agent service or cron script
 
 ### What fusioninventory affects
 
-fusion-inventoryagent
+fusioninventory-agent
 cron
 
 
@@ -59,7 +59,7 @@ cron
 
 ## Limitations
 
-Tested in Debian and Rhel
+Tested in Debian and Windows
 
 ## Development
 

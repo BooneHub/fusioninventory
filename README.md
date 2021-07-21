@@ -31,7 +31,7 @@ cron
 
 ### Beginning with fusioninventory
 
-    puppet module install nodanero-fusioninventory
+    puppet module install boone-fusioninventory
 
 ## Usage
 
